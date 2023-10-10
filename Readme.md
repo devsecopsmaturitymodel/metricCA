@@ -47,6 +47,6 @@ MetricCA is released under the MIT License.
 
 # Sponsors
 
-![AXA](docs/sponsors/axa.png)
+![AXA](docs/sponsors/axa.jpg)
 
 ![Timo Pagel IT-Consulting](docs/sponsors/timo-pagel.png)
