@@ -117,7 +117,7 @@ activities:
   # Operate
   # mean time to patch: Hard to identify
   automated PRs for patches:
-    configuration url: https://github.com/org/repo/dependabot.yaml
+    configuration url: https://github.com/org/repo/dependabot.yaml # or .github/renovate.json
 
   # Monitor
   logging capabilities:
@@ -240,3 +240,4 @@ activityNameMapping:
     mappedName: reduced attack surface
     level: Level 2
 ```
+

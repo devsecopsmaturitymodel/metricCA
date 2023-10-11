@@ -76,3 +76,11 @@ The Software Strategy Pattern could fit this purpose (see also [Strategy](https:
 
 In order to send out notifications to DefectDojo, the [defectdojo-client-java](https://github.com/secureCodeBox/defectdojo-client-java) is handy to use to communicate with DefectDojo.
 Is it ok to load the library in the main project? Do we want a "plugin" which loads the library by itself.
+
+## Generation of Grafana dashboards
+To define thresholds within the YAMLs would be beneficial in order to lower the dependency to Grafana.
+
+The following existing libraries could be found to generate dashboards:
+https://github.com/bhattchaitanya/Grafana-Dashboard-Generator, Java, last update 7 years
+https://github.com/appnexus/grafana-api-java-client, java, last update 5 years
+https://github.com/uber/grafana-dash-gen#step-5-create-an-alert-and-add-it-to-the-graph, javascript, last update a month ago
