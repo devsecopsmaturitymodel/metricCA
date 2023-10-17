@@ -84,3 +84,7 @@ The following existing libraries could be found to generate dashboards:
 https://github.com/bhattchaitanya/Grafana-Dashboard-Generator, Java, last update 7 years
 https://github.com/appnexus/grafana-api-java-client, java, last update 5 years
 https://github.com/uber/grafana-dash-gen#step-5-create-an-alert-and-add-it-to-the-graph, javascript, last update a month ago
+
+### JSONNET
+https://github.com/databricks/sjsonnet, java, month
+https://github.com/grafana/grafonnet, jsonnet, last update days
