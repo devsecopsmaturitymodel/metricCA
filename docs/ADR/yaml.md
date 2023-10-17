@@ -14,7 +14,7 @@ To have the team name in the folder name has the following advantages:
 
 To have the team name in the folder name has the following disadvantages:
 
-- Folder name should only be [a-Z0-9]\-
+- Folder name should only be [a-zA-Z0-9]\-
 
 As an alternative, config.yaml/metadata.yaml can be used to define the team names within the corresponding folder.
 
@@ -28,9 +28,9 @@ We use the categories  Team-based  and  Application-based . For example the acti
 
 The YAMLs describe the requirements. The maturity model state based on the status of each activity is analyzed by the application.
 
-Date format is `Year-Month-Day`.
+Date format is `YYYY-MM-DD`. All files must use the characters [a-zA-Z0-9]\- only.
 
-Application-based sample `teamRebels/applicationDeathStar.yaml`:
+Application-based sample `team-rebels/application-deathStar.yaml`:
 
 ```YAML
 application settings:
@@ -160,7 +160,7 @@ activities:
 
 Application-based yamls have the prefix `application`, a second application for the team rebels could be named like `teamXYZ/applicationStarDestroyer.yaml`.
 
-Team-based sample `teamRebels/team.yaml`:
+Team-based sample `team-rebels/team.yaml`:
 
 ```YAML
 activities:
@@ -229,7 +229,27 @@ conduction of simple threat modeling on a technical level:
           - title: string
           - url: url
   level: Level 2
+  threshold:
+    attribute: date,
+    value: 10
+    timespan: 365
+  diagramType: "chart"
+  grafana: |
+          {
+            metric: "chart"
+          }
 ```
+
+## Grafana Dashboard
+
+```JSON
+{
+  "metric": "chart",
+  "threshold": 5,
+  "timespan": 90
+}
+```
+
 
 ## Name Mapping
 For example in MetricCA the activity `reduction of the attack surface` in DSOMM has the name `reduced attack surface` internally.
