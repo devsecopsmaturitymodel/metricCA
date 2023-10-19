@@ -14,7 +14,7 @@ To have the team name in the folder name has the following advantages:
 
 To have the team name in the folder name has the following disadvantages:
 
-- Folder name should only be [a-zA-Z0-9]\-
+- Folder name should only be [a-zA-z0-9_\-]
 
 As an alternative, config.yaml/metadata.yaml can be used to define the team names within the corresponding folder.
 
@@ -28,7 +28,7 @@ We use the categories  Team-based  and  Application-based . For example the acti
 
 The YAMLs describe the requirements. The maturity model state based on the status of each activity is analyzed by the application.
 
-Date format is `YYYY-MM-DD`. All files must use the characters [a-zA-Z0-9]\- only.
+Date format is `YYYY-MM-DD`. All files must use the characters [a-zA-z0-9_\-] only.
 
 Application-based sample `team-rebels/application-deathStar.yaml`:
 
