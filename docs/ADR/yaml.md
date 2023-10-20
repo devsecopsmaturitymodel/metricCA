@@ -24,7 +24,7 @@ Team folders on the first level allow the product owner to easily find relevant 
 
 In this structure, the Product Owner will need guidance on how to add new YAMLs to the team-based folder or new files need to be added automatically.
 
-We use the categories  Team-based  and  Application-based . For example the activity  Nominate a security champion  is often team based. While the activity  Branch protection is enabled  is application-based.
+We use the categories Team-based and Application-based. For example the activity _Nominate a security champion_ is often team-based. While the activity _Branch protection is enabled_ is application-based.
 
 The YAMLs describe the requirements. The maturity model state based on the status of each activity is analyzed by the application.
 
@@ -33,9 +33,12 @@ Date format is `YYYY-MM-DD`. All files must use the characters [a-zA-z0-9_\-] on
 Application-based sample `team-rebels/application-deathStar.yaml`:
 
 ```YAML
+apiVersion: v1
+kind: application
 application settings:
   desired level: Basic understanding of security practices # one team can have multiple applications in different levels
   application id: 1234 # e.g. from deployment
+  name: Death Star
 
 activities:
   # Plan
@@ -60,7 +63,8 @@ activities:
       - 2023-09-01
   # Code
   source control protection:
-    url: example.com/repo/123 # Link to application URL
+    - url: example.com/repo/service-1 # Link to application repository URL
+    - url: example.com/repo/service-1 # Link to application repository URL
     # branch protection is checked on PR; Later automatically via collector
 
   # One application might have multiple images
@@ -163,6 +167,8 @@ Application-based yamls have the prefix `application`, a second application for 
 Team-based sample `team-rebels/team.yaml`:
 
 ```YAML
+apiVersion: v1
+kind: team
 activities:
   each team has a security champion:
     nomination: Max Mustermann # Name of the security champion
@@ -235,21 +241,12 @@ conduction of simple threat modeling on a technical level:
     timespan: 365
   diagramType: "chart"
   grafana: |
-          {
-            metric: "chart"
-          }
+        {
+          "metric": "chart",
+          "threshold": 5,
+          "timespan": 90
+        }
 ```
-
-## Grafana Dashboard
-
-```JSON
-{
-  "metric": "chart",
-  "threshold": 5,
-  "timespan": 90
-}
-```
-
 
 ## Name Mapping
 For example in MetricCA the activity `reduction of the attack surface` in DSOMM has the name `reduced attack surface` internally.
