@@ -12,8 +12,10 @@ MetricCA is an open-source tool designed to collect, process, and showcase metri
 - **Secure Workflow**: Integrated with secure review and approval workflows to ensure data integrity and security.
 
 ## Architecture
-
-![Architecture Overview](docs/architecture.png)
+### Overview
+![Overview](docs/overview.png)
+### Details
+![Architecture](docs/architecture.png)
 
 # Process Flow
 
