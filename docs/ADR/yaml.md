@@ -43,6 +43,11 @@ application settings:
 activities:
   # Plan
   conduction of simple threat modeling on a technical level:
+    - title: Feature Y
+      date: 2023-10-01
+      links: # Maybe some teams would like the option for multiple links, e.g. to a used threat library
+        - title: Documentation of new Feature Y
+          url: https://link-for-example-in-confluencex
     - title: Feature X
       date: 2023-11-01
       links: # Maybe some teams would like the option for multiple links, e.g. to a used threat library
@@ -181,7 +186,6 @@ activities:
   coding standard:
     - read date: 2022-09-02
     - read date: 2023-09-01
-    
 ```
 
 Team-based activities are inherited to Application-Based activities.
@@ -227,10 +231,12 @@ data privacy requirements:
     - array: date # TODO 
   mapping: Logging: PII logging concept
   level: Level 1
+  # TODO Threshold
+
 conduction of simple threat modeling on a technical level:
   components:
     array:
-      - title: string  
+      - title: string
         date: date
         array:
           - title: string
@@ -240,12 +246,9 @@ conduction of simple threat modeling on a technical level:
     attribute: date,
     value: 10
     timespan: 365
-  diagramType: "chart"
   grafana: |
         {
-          "metric": "chart",
-          "threshold": 5,
-          "timespan": 90
+          "metric": "chart"
         }
 ```
 
