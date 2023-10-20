@@ -78,7 +78,8 @@ activities:
 
   # Build
   defined build process:
-    url: https://github.com/org/repo/.github/workflows # access checked on PR
+    - url: https://github.com/org/repo/.github/workflows # access checked on PR
+    - url: https://github.com/org/repo/.github/workflows # access checked on PR
 
   # Test
   #mttr: hard to determine/continuously update manually
