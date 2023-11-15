@@ -79,5 +79,5 @@ Advantages:
 https://github.com/influxdata/influxdb2-sample-data/tree/master/bird-migration-data
 
 ## Conclusion
-The storage process of prometheus 
+The storage process of prometheus is very unhandy.
 In order to store unstructured data, influxDB is used besides the mentioned disadvantages.
