@@ -1,5 +1,5 @@
 # ADR Data Storage
-The date of an entry doesn't correlate to the date of scrapping. Scrapping might happen days later, because the PR is merged later.
+The date of an activity doesn't correlate to the date of scrapping (in our case population of data). Scrapping might happen days later, because the PR is merged later.
 
 The Grafana data source should be listed in https://grafana.com/docs/grafana/latest/alerting/fundamentals/data-source-alerting/ to be able to perform alerting.
 
