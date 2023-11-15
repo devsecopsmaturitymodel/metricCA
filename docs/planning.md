@@ -6,7 +6,7 @@
 | Setup local development env.                                                                                      | 0.5        | R,T      | in progress |
 | Create configuration.yaml for some planned activities                                                             | 0.5        | R,T      |             |
 | Deployment of sample activities and model description                                                             | 0.5        | R,T      |             |
-| Transfer meta model information to java objects (Analyzer)                                                        | 3          | R        |             |
+| Transfer meta model information to java objects (Analyzer)                                                        | 3          | R        |      in progress       |
 | Check thresholds and add isImplemented=true/false (Analyzer)                                                      | 0.5        | R        |             |
 | Export to influxDB                                                                                                | 1          | T        |             |
 | Development of a build process (trigger build on push, push images with semantic versioning, semantic versioning?) | 1          | T,(R)    | yes         |
