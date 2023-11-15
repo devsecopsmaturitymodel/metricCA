@@ -12,6 +12,7 @@ Backfilling with the command `promtool tsdb create-blocks-from openmetrics` supp
 
 Disadvantage:
 - Prometheus' libraries might not be able to be used due to change of format with an additional UNIX timestamp
+- A sample entrypoint in the database is shown over a long period of time (~1 min). This means, there is more knowledge needed to configure the time series database
 
 Advantage:
 - Supports timestamps
@@ -19,7 +20,7 @@ Advantage:
 #### Usage
 After running promtool, prometheus needs to be restarted in order to read the generated _write ahead logs_ files.
 
-##### TODO
+##### TODO in case of usage
 Change `command` to first read configMap and then start prometheus.
 
 ## RDBMS (PostgresSQL/MySQL/MariaDB)
@@ -34,6 +35,9 @@ Advantage:
 - Query language widely known 
 
 URL: https://blog.devgenius.io/how-to-setup-grafana-with-postgresql-database-using-docker-compose-a-step-by-step-guide-e5a9cce90ba3
+
+## OpenTSDB
+License model for running in the cloud unhandy.
 
 ## MongoDB
 Is a payed enterprise plugin: https://grafana.com/docs/plugins/
@@ -72,4 +76,5 @@ Advantages:
 https://github.com/influxdata/influxdb2-sample-data/tree/master/bird-migration-data
 
 ## Conclusion
+The storage process of prometheus 
 In order to store unstructured data, influxDB is used besides the mentioned disadvantages.
