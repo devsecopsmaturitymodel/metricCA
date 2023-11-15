@@ -4,6 +4,8 @@ The date of an activity doesn't correlate to the date of scrapping (in our case 
 The Grafana data source should be listed in https://grafana.com/docs/grafana/latest/alerting/fundamentals/data-source-alerting/ to be able to perform alerting.
 
 ## Prometheus
+Prometheus wants to be a monitoring solution. The documentation and issues highlite often, that the time of scrapping is important for prometheus. Therefore, prometheus team doesn't want that timestamps are provided.
+
 ### Node Exporter with textfile collector
 Doesn't support timestamps according to https://github.com/prometheus/node_exporter#textfile-collector
 
@@ -12,6 +14,7 @@ Backfilling with the command `promtool tsdb create-blocks-from openmetrics` supp
 
 Disadvantage:
 - Prometheus' libraries might not be able to be used due to change of format with an additional UNIX timestamp
+- Process with WAL doesn't look convinced
 - A sample entrypoint in the database is shown over a long period of time (~1 min). This means, there is more knowledge needed to configure the time series database
 
 Advantage:
