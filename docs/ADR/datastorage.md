@@ -69,12 +69,14 @@ URL: https://www.metricfire.com/blog/using-grafana-with-elasticsearch-tutorial/
 
 Disadvantages
 - Maintained by one company
+- Cloud offerings high lited a lot
 - Query language unknown to current developers and likely for future developers
 
 Advantages:
 - Unstructured data possible
 - Alerting support
 - Java library exists https://docs.influxdata.com/influxdb/v2/api-guide/client-libraries/
+- MIT license makes useage easy in any env.
 
 https://github.com/influxdata/influxdb2-sample-data/tree/master/bird-migration-data
 
