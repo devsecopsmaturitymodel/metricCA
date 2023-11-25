@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: metric
+data:
+  # mkdir /prometheus/data; echo "" > /prometheus/data/metrics.txt &&  echo 'policyread{team="A"} 1 1699625233352' >> /prometheus/data/metrics.txt && echo "# EOF" >> /prometheus/data/metrics.txt &&
+  # promtool tsdb create-blocks-from openmetrics /prometheus/data/metrics.txt /prometheus/data/
+  # promtool tsdb create-blocks-from openmetrics /prometheus/metrics.txt /prometheus/data/
+  metric-data.txt: |
+    # TYPE threatmodeling gauge
+    threatmodeling{application="A"} 1 1699683547
+    threatmodeling{application="B"} 1 1699681547
+    threatmodeling{application="B"} 1 1699683417
+    threatmodeling{application="B"} 1 1699683547
+    threatmodeling{application="C"} 1 1699681547
+    threatmodeling{application="C"} 1 1699596232
+    threatmodeling{application="C"} 1 1699509832
+    threatmodeling{application="C"} 1 1667973832
+    threatmodeling{application="C"} 1 1636437832
+    # EOF
+  # promtool tsdb create-blocks-from openmetrics /prometheus/metrics.txt /prometheus/data/
+  metric-data2.txt: |
+    # TYPE threatmodeling gauge
+    pentest{application="A"} 1 1699869604
+    pentest{application="B"} 1 1699869604
+    pentest{application="B"} 1 1699683417
+    pentest{application="B"} 1 1699683547
+    pentest{application="C"} 1 1699869604
+    pentest{application="C"} 1 1699596232
+    pentest{application="C"} 1 1699509832
+    pentest{application="C"} 1 1667973832
+    pentest{application="C"} 1 1636437832
+    # EOF
