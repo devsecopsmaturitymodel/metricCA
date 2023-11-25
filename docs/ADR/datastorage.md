@@ -71,15 +71,13 @@ Disadvantages
 - Maintained by one company
 - Cloud offerings high lited a lot
 - Query language unknown to current developers and likely for future developers
+- Due to commercial influxDB version 3, the end of support for version 2 (MIT) might come soon
 
 Advantages:
 - Unstructured data possible
 - Alerting support
 - Java library exists https://docs.influxdata.com/influxdb/v2/api-guide/client-libraries/
-- MIT license makes useage easy in any env.
 
 https://github.com/influxdata/influxdb2-sample-data/tree/master/bird-migration-data
 
 ## Conclusion
-The storage process of prometheus is very unhandy.
-In order to store unstructured data, influxDB is used besides the mentioned disadvantages.
