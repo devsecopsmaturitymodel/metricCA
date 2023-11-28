@@ -59,13 +59,11 @@ activities:
   #            confirmed date: 2023-10-09
 
   data privacy requirements:
-    read date:
-      - 2022-09-02
-      - 2023-09-01
+    - read date: 2022-09-02
+    - read date: 2023-09-01
   security requirements:
-    read date:
-      - 2022-09-02
-      - 2023-09-01
+    - read date: 2022-09-02
+    - read date: 2023-09-01
   # Code
   source control protection:
     - url: example.com/repo/service-1 # Link to application repository URL
