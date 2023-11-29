@@ -80,4 +80,17 @@ Advantages:
 
 https://github.com/influxdata/influxdb2-sample-data/tree/master/bird-migration-data
 
+## API
+Plugins like the [infinity datastore plugin](https://github.com/grafana/grafana-infinity-datasource) offer to directly ask an API instead of a database. With frameworks like spring boot, it is easy possible to offer an API.
+The "database" is stored in YAMLs. This might mean, that the collector should to store data also in YAMLs (no final descision so far).
+
+Advantages:
+- No DB needed
+- Easy to setup
+
+Disadvantages:
+- Less documentation
+- Open service port
+
 ## Conclusion
+We use the API plugin instead of a separate database.
