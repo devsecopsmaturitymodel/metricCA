@@ -1,16 +1,16 @@
 # Planning
 
-| Task                                                                                                              | Time (day) | Person   | Done        |
+| Task                                                                                                              | Time (day) | Person   | Status        |
 |-------------------------------------------------------------------------------------------------------------------|------------|----------|-------------|
-| Integration of a java linter into the pipeline                                                                    | 0.5        | T        | yes         |
-| Setup local development env.                                                                                      | 0.5        | R,T      | in progress |
-| Create configuration.yaml for some planned activities                                                             | 0.5        | R,T      |             |
-| Deployment of sample activities and model description                                                             | 0.5        | R,T      |             |
+| Integration of a java linter into the pipeline                                                                    | 0.5        | T        | done         |
+| Setup local development env.                                                                                      | 0.5        | R,T      | done |
+| Create configuration.yaml for some planned activities                                                             | 0.5        | R,T      |          done   |
+| Deployment of sample activities and model description                                                             | 0.5        | R,T      |         done    |
 | Transfer meta model information to java objects (Analyzer)                                                        | 3          | R        |      in progress       |
 | Check thresholds and add isImplemented=true/false (Analyzer)                                                      | 0.5        | R        |             |
-| Export to influxDB                                                                                                | 1          | T        |             |
-| Development of a build process (trigger build on push, push images with semantic versioning, semantic versioning?) | 1          | T,(R)    | yes         |
-| Setup influxDB/Grafana locally                                                                                    | 1.5        | T        | yes         |
+| Provide data via API                                                                                                | 1          | T        | in progress            |
+| Development of a build process (trigger build on push, push images with semantic versioning, semantic versioning?) | 1          | T,(R)    | done         |
+| Setup Grafana locally                                                                                    | 1.5        | T        | yes         |
 | Preparation of Grafana Dashboards for different metrics (fill test data -> click metric -> make template)         | 2.5        | T        | in progress |
 | Create configuration.yaml for all planned activities                                                              | 1          | T,(R)    |             |
 | Implementation of Grafana Dashboards configuration into metricsCA (Analyzer Generate Dashboards)                  | 2          | T        |             |
