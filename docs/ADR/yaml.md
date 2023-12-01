@@ -32,6 +32,8 @@ Date format is `YYYY-MM-DD`. All files must use the characters [a-zA-z0-9_\-] on
 
 Application-based sample `team-rebels/application-deathStar.yaml`:
 
+Up to this point, we support to the maximum level of two nesting in the YAML file. Consequently, creating an array three times within it is currently not feasible. However, we envision implementing full recursion in the future to enhance flexibility and enable more advanced structuring beyond the current limitations.
+
 ```YAML
 apiVersion: v1
 kind: application
