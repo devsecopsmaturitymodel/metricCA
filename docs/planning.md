@@ -37,6 +37,9 @@ Remark: Some activities are to be performed by two developers, but it will not s
 Backlog:
 | Task                                                                                                                                  | Time (day) |Person|
 |---------------------------------------------------------------------------------------------------------------------------------------|------------|---|
+| Implementation of State Not Applicable                                                                                                  | 1          ||
+| Implementation of Authentication for Grafana and Git                                                                                                  | 2      ||
+| Implementation of Authentication for Grafana and Git                                                                                                  | 1          ||
 | Sort metrics in Dashboard (optional)                                                                                                  | 1          ||
 | Alarm send out for defined activities (optional)                                                                                      | 1          ||
 | Collector (from 3 APIs and MTTR/MTTP calculation, Pentest)                                                                            | 5          ||
