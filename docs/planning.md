@@ -8,22 +8,21 @@
 | Deployment of sample activities and model description                                                             | 0.5        | R,T      |         done    |
 | Transfer meta model information to java objects (Analyzer)                                                        | 3          | R        |      done       |
 | Check thresholds and add isImplemented=true/false for simple activities (Analyzer)                                                      | 0.5        | R        |        done      |
-| Check thresholds and add isImplemented=true/false for complex activities like security training (Analyzer)                                                      | 0.5        | R        |           |
-| Provide data via API                                                                                                | 1          | T        
-| in progress (maybe a bug left)            |
+| Check thresholds and add isImplemented=true/false for complex activities like security training (Analyzer)                                                      | 0.5        | R        |       done    |
+| Provide data via API                                                                                                | 1          | T        | done            |
 | Development of a build process (trigger build on push, push images with semantic versioning, semantic versioning?) | 1          | T,(R)    | done         |
 | Setup Grafana locally                                                                                    | 1.5        | T        | done         |
 | Team Integration to show teams without activities as red                                                                                    | 1        | T        |          |
 | Preparation of Grafana Dashboards for different metrics (fill test data -> click metric -> make template)         | 2.5        | T        | done |
 | Create Overview-Dashboards         |        | T        | done |
-| Create Team-Dashboards         |        | T        |  |
-| Create Matrix-Dashboard         |        | T        |  |
+| Create Team-Dashboards         |        | T        |  done|
+| Create Matrix-Dashboard         |        | T        |  done |
 | Create skeleton.yaml for all planned activities                                                              | 1          | T,(R)    |         done    |
 | Implementation of Grafana Dashboards configuration into metricsCA (Analyzer Generate Dashboards)                  | 2          | T        |        done     |
 | Figure out how to do PRs with (automated) schema validation in an enterprise organization                         | 0.5        | R,(Timo) |             |
 | Generate yaml schema for model objects for activities (Analyzer)                                                  | 2          | R        |             |
 | Check yaml schema generation on skeleton.yaml change in organization build pipeline                          | 0.5        | T,(R)    |             |
-| Refinement of activities                                                                                          | 0.5        | T        |             |
+| Refinement of activities                                                                                          | 0.5        | T        |     done        |
 | Integration of automated PRs for new patches into the pipeline                                                    | 0.5        | T        |             |
 | Integration of test-coverage checks into the pipeline                                                             | 1          | T,(R)    |             |
 | Determine organizational teams and applications automated                                                         | 2          | R        |             |
@@ -38,6 +37,9 @@ Remark: Some activities are to be performed by two developers, but it will not s
 Backlog:
 | Task                                                                                                                                  | Time (day) |Person|
 |---------------------------------------------------------------------------------------------------------------------------------------|------------|---|
+| Implementation of State Not Applicable                                                                                                  | 1          ||
+| Implementation of Authentication for Grafana and Git                                                                                                  | 2      ||
+| Implementation of Authentication for Grafana and Git                                                                                                  | 1          ||
 | Sort metrics in Dashboard (optional)                                                                                                  | 1          ||
 | Alarm send out for defined activities (optional)                                                                                      | 1          ||
 | Collector (from 3 APIs and MTTR/MTTP calculation, Pentest)                                                                            | 5          ||
