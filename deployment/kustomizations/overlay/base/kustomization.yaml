@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+resources:
+  - grafana/
+  - metricAnalyzer/
+
+commonLabels:
+  app.kubernetes.io/name: metricca
+  app.kubernetes.io/instance: org.owasp.dsomm.metricca

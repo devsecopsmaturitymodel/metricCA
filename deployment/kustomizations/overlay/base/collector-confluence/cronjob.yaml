@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: collector-confluence
+spec:
+  schedule: "*/15 * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: collector-confluence
+              image: wurstbrot/collector-confluence
+              imagePullPolicy: IfNotPresent
+              volumeMounts:
+                - name: metric-analyzer-config
+                  mountPath: "/app/resources/application-prod.properties"
+                  subPath: application-prod.properties
+                  readOnly: true
+          volumes:
+            - name: metric-analyzer-config
+              configMap:
+                name: metric-analyzer-config
+                items:
+                  - key: "application-prod.properties"
+                    path: "application-prod.properties"
+            - name: metric-analyzer-secret
+          restartPolicy: OnFailure
+
