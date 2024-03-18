@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: metric-analyzer-config
+data:
+  application-prod.properties: |
+    metricCA.git.targetPath=/tmp/metricCA
+    metricCA.resource.path=/app/resources
+    spring.config.import: ${metricCA.resource.path}/application.properties
+    metricCA.application.path=${metricCA.git.targetPath}/definitions
+    
+    metricCA.skeleton.path=${metricCA.resource.path}/skeleton.yaml
+    spring.devtools.add-properties=false
+    
+    #metricCA.skeleton.path=${metricCA.resource.path}/skeleton.yaml

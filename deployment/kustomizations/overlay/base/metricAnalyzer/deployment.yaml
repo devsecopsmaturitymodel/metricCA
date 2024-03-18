@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metric-analyzer-deployment
+  labels:
+    app: metric-analyzer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metric-analyzer
+  template:
+    metadata:
+      labels:
+        app: metric-analyzer
+    spec:
+      containers:
+        - name: metric-analyzer
+          image: wurstbrot/metric-analyzer:1.18.1
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: metric-analyzer-config
+              mountPath: "/app/resources/application-prod.properties"
+              subPath: application-prod.properties
+              readOnly: true
+            - name: metric-analyzer-secret
+              mountPath: "/app/resources/application-secret.properties"
+              subPath: application-secret.properties
+              readOnly: true
+          env:
+            - name: spring_profiles_active
+              value: "secret"
+      volumes:
+        - name: metric-analyzer-config
+          configMap:
+            name: metric-analyzer-config
+            items:
+              - key: "application-prod.properties"
+                path: "application-prod.properties"
+        - name: metric-analyzer-secret
+          secret:
+            secretName: metric-analyzer-secret
+            items:
+              - key: "application-secret.properties"
+                path: "application-secret.properties"

@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - grafana-datasources.yaml
+  - pvc.yaml
+  - service.yaml
+
+commonLabels:
+  app.kubernetes.io/component: grafana
