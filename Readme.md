@@ -39,6 +39,29 @@ From development environment tools like Jira, Confluence, or github, the API can
 * *product owner*:  A role in agile frameworks, responsible for defining, prioritizing, and optimizing the work of the development team to deliver maximum value. As a risk owner, they also manage risks related to the product’s development, features, and usage.
 * *notification*: Information about a missing activity.
 
+# Deployment
+Deployment in a kubernetes cluster:
+
+Copy the folder `deployment` or `deployment/kustomizations/overlay` to your infrastructure as code repository.
+
+```
+kubectl create ns metricca
+kubectl apply -k deployment/kustomizations/base -n metricca
+```
+
+Follow description in [metricAnalyzer](https://github.com/devsecopsmaturitymodel/metricAnalyzer?tab=readme-ov-file#local-run) to get a token and a datasource id.
+In _minikube_ use `minikube service grafana -n metricca` to access grafana.
+
+Adjust `deployment/kustomizations/overlay/secrets/metric-analyzer.secret.yaml` with token, url and datasource id.
+
+Get login, token and url from your confluence account.
+Adjust `deployment/kustomizations/overlay/secrets/collector-confluence.secret.yaml` with login, token and url.
+
+```
+kubectl apply -k deployment/kustomizations/overlay/secrets -n metricca
+```
+
+
 # Contributing
 
 We encourage you to contribute to MetricCA! Please check out the Contributing to MetricCA guide for guidelines about how to proceed.
