@@ -17,14 +17,14 @@ spec:
       containers:
         - name: metric-analyzer
           image: wurstbrot/metric-analyzer:1.18.1
-          imagePullPolicy: always
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
             - name: spring_profiles_active
               value: "prod"
           envFrom:
-            configMapRef:
-              name: metric-analyzer-config
-            secretMapRef:
-              name: metric-analyzer-secret
+            - configMapRef:
+                name: metric-analyzer-config
+            - secretRef:
+                name: metric-analyzer-secret
