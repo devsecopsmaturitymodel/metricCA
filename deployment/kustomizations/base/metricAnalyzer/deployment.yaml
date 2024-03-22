@@ -17,7 +17,7 @@ spec:
       containers:
         - name: metric-analyzer
           image: wurstbrot/metric-analyzer:1.18.1
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           env:

@@ -3,7 +3,8 @@ kind: ConfigMap
 metadata:
   name: metric-analyzer-config
 data:
-  GIT_URL: https://github.com/devsecopsmaturitymodel/metricAnalyzer.git
-  METRIC_ANALYZER_BASE_URL: http://metric-analyzer:8080
-  GRAFANA_BASE_URL: http://grafana:3000
-  METRIC_ANALYZER_INFINITY_DATRASOURCE_ID: cdg470wnbiqyoe
+  GIT_URL: 'https://github.com/devsecopsmaturitymodel/metricca-data.git'
+  METRIC_ANALYZER_BASE_URL: 'http://metric-analyzer:8080'
+  GRAFANA_BASE_URL: 'http://grafana:3000'
+  METRIC_ANALYZER_INFINITY_DATRASOURCE_ID: 'cdg470wnbiqyoe'
+  LOGGING_LEVEL_OWASP: 'INFO'

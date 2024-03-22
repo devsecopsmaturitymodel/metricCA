@@ -4,10 +4,9 @@ kind: Kustomization
 # secrets have to be applied beforehand, see overlay/secrets
 
 resources:
+  - configmap.yaml
   - deployment.yaml
   - service.yaml
-  - configmap.yaml
-#  - git.secret.yaml # in prod
 
 commonLabels:
   app.kubernetes.io/component: metricAnalyzer
