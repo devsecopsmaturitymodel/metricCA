@@ -31,6 +31,9 @@
 | Deployment MetricCA                                                                                               | 3          | R,(T)    |     in progress        |
 | Deployment Grafana Stack                                                                                          | 2          | T,(R)    |    in progress         |
 | Collector Confluence Deployment                                                                                   | 1          | R, (T)   | |
+| Add more status with different colurs (e.g. gray/yellow)                                                         | 2          |  T  | |
+| Add HTTP-Collector                                                         | 2          |  R  | |
+
 
 Remark: Some activities are to be performed by two developers, but it will not slow us down. We think that will come up to 3 days.
 
