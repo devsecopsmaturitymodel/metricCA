@@ -71,6 +71,10 @@ application settings:
   application id: 1234 # e.g. from deployment
   name: Death Star
 
+includes:
+  - path/to/an/other/activity-definition # base is `metricCA.application.path`
+  - path/to/an/other-other/activity-definition # base is `metricCA.application.path`
+
 activities:
   # Plan
   conduction of simple threat modeling on a technical level:
